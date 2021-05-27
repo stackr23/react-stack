@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DoubleU23/react-stack.git"
+    "url": "git+https://github.com/stackr23/react-stack.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DoubleU23/react-stack/issues"
+    "url": "https://github.com/stackr23/react-stack/issues"
   },
-  "homepage": "https://github.com/DoubleU23/react-stack#readme",
+  "homepage": "https://github.com/stackr23/react-stack#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
