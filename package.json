@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix --ext \".js,.jsx,.ts,.tsx\" . --quiet --format pretty && prettier **/*.{css,scss,md,json} --write"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,26 @@
   "bugs": {
     "url": "https://github.com/DoubleU23/react-stack/issues"
   },
-  "homepage": "https://github.com/DoubleU23/react-stack#readme"
+  "homepage": "https://github.com/DoubleU23/react-stack#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{css,scss,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix --quiet",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@stackr23/config-eslint": "^2.0.0",
+    "eslint": "^7.27.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0"
+  }
 }

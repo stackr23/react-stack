@@ -1,0 +1,21 @@
+# build files
+dist/
+build/
+
+# node
+node_modules/
+package-lock.json
+yarn.lock
+
+# ViewAR
+.viewar-config
+
+#log files
+*.log
+
+# misc
+.DS_Store
+Thumbs.db
+.idea/
+*.sublime-project
+*.sublime-workspace
