@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --fix --ext \".js,.jsx,.ts,.tsx\" . --quiet --format pretty && prettier **/*.{css,scss,md,json} --write"
+    "test": "npx karma start ./node_modules/@stackr23/webpack/karma",
+    "lint": "eslint --fix --ext \".js,.jsx,.ts,.tsx\" . --quiet --format pretty && prettier **/*.{css,scss,md,json} --write",
+    "clean": "rimraf build",
+    "build": "npm run clean && webpack -p --mode production --env production",
+    "start": "webpack-dev-server --open --mode development --env development_core"
   },
   "repository": {
     "type": "git",
@@ -33,9 +36,14 @@
     ]
   },
   "devDependencies": {
-    "@stackr23/config-eslint": "^2.0.0",
     "eslint": "^7.27.0",
     "husky": "^6.0.0",
-    "lint-staged": "^11.0.0"
+    "karma": "^6.3.4",
+    "lint-staged": "^11.0.0",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "@stackr23/config-eslint": "^2.0.0",
+    "@stackr23/webpack": "^2.0.0"
   }
 }
