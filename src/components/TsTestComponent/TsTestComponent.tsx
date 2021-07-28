@@ -5,11 +5,7 @@ interface Props {
 }
 
 const TestFn = (props: Props): string => {
-  return (
-    <>
-      {props.content}
-    </>
-  )
+  return <>{props.content}</>
 }
 
 TestFn({ content: 'test' })
