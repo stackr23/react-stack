@@ -1,0 +1,29 @@
+{
+  "display": "Node 14",
+  "compilerOptions": {
+    "strict": true,
+    "outDir": "./build/",
+    "sourceMap": true,
+    "jsx": "react",
+    "lib": ["ES2020", "dom"],
+    "target": "es2020",
+    "module": "commonjs",
+    // "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "downlevelIteration": true,
+    "importHelpers": true,
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["./src/components/*"]
+    },
+    "skipLibCheck": false,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["./src/**/*", "./test/**/*"],
+  "exclude": ["node_modules", "**/*.spec.*"],
+  "awesomeTypescriptLoaderOptions": {
+    "reportFiles": ["./src/**/*"]
+  },
+  "allowSyntheticDefaultImports": true
+}
