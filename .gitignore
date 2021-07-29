@@ -1,7 +1,7 @@
 # build files
 dist/
 build/
-
+*cache/
 # node
 node_modules/
 package-lock.json
