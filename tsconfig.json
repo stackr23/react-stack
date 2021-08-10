@@ -2,28 +2,39 @@
   "display": "Node 14",
   "compilerOptions": {
     "strict": true,
+    "noImplicitReturns": true,
     "outDir": "./build/",
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types"],
     "sourceMap": true,
     "jsx": "react",
-    "lib": ["ES2020", "dom"],
-    "target": "es2020",
+    "lib": ["esnext", "dom"],
     "module": "commonjs",
-    // "moduleResolution": "node",
+    "target": "es5",
+    "moduleResolution": "node",
     "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "declaration": false,
     "noImplicitAny": false,
     "downlevelIteration": true,
     "importHelpers": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
       "components/*": ["./src/components/*"]
     },
-    "skipLibCheck": false,
-    "forceConsistentCasingInFileNames": true
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    // handled by ESLint (shows warning)
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
   },
-  "include": ["./src/**/*", "./test/**/*"],
-  "exclude": ["node_modules", "**/*.spec.*"],
+  "include": ["./src/**/*"],
+  "exclude": ["**/*.spec.*"],
   "awesomeTypescriptLoaderOptions": {
-    "reportFiles": ["./src/**/*"]
-  },
-  "allowSyntheticDefaultImports": true
+    "reportFiles": ["./src/**/*.{ts,tsx}"],
+    "ignoreDiagnostics": [1005 /* expected semicolon */],
+    "useCache": true
+  }
 }
