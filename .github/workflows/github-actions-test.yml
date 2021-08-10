@@ -22,3 +22,10 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: npm ci
       - run: npm test
+  release:
+    name: Semantic Release Process
+    if: ${{github.ref == 'refs/heads/main'}}
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "RUNNING SEMANTIC RELEASE"
