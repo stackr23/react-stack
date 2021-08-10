@@ -4,8 +4,11 @@ interface Props {
   content: string;
 }
 
-const TestFn = (props: Props): string => {
+const TsTestComponent = (props: Props): string => {
   return <>{props.content}</>
 }
 
-TestFn({ content: 'test' })
+// TsTestComponent({ content: 'test' })
+
+export default TsTestComponent
+
