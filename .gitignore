@@ -4,8 +4,6 @@ build/
 *cache/
 # node
 node_modules/
-package-lock.json
-yarn.lock
 
 # ViewAR
 .viewar-config

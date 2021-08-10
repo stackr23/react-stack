@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: ${{matrix.stable != true}}
     strategy:
+      fail-fast: false
       matrix:
         node: ['13', '14', '15']
         stable: [true]
