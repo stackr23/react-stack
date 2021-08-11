@@ -4,16 +4,12 @@ jobs:
   test:
     name: Testing with NodeJS v${{ matrix.node }}
     runs-on: ubuntu-latest
-    continue-on-error: ${{matrix.stable != true}}
+    continue-on-error: ${{matrix.stable == false}}
     strategy:
       fail-fast: false
       matrix:
         node: ['13', '14', '15']
         stable: [true]
-        include:
-          - node: 16
-            os: ubuntu-18.04
-            stable: false
     steps:
       - uses: actions/checkout@v2
       - name: Setup node
@@ -24,7 +20,7 @@ jobs:
       - run: npm test
   release:
     name: Semantic Release Process
-    if: ${{github.ref == 'refs/heads/main'}}
+    if: ${{github.ref == 'refs/heads/main' && github.event_name == 'pull_request'}}
     needs: test
     runs-on: ubuntu-latest
     steps:
