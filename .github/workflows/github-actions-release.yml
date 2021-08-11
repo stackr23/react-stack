@@ -1,5 +1,8 @@
 name: Semantic Release
-on: [push, pull_request]
+on:
+  pull_request:
+    branches:
+      - main
 jobs:
   release:
     name: Semantic Release Process
