@@ -8,8 +8,7 @@ on:
     tags-ignore:
       - '**'
   pull_request:
-    branches:
-      - 'main'
+    types: [closed]
     tags-ignore:
       - '**'
 jobs:
@@ -34,7 +33,7 @@ jobs:
   release:
     name: Semantic Release Process
     needs: karma_test
-    if: ${{github.ref == 'refs/heads/main' && github.event.pull_request.merged == true}}
+    if: github.base_ref == 'main' && github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
