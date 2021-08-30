@@ -1,0 +1,23 @@
+name: GitHub Actions Demo
+on:
+  push:
+    branches:
+      - 'main'
+      - 'master'
+    tags-ignore:
+      - '**'
+jobs:
+  semantic_release:
+    name: Semantic Release Process
+    needs: 'test_and_lint'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - run: echo "RUNNING SEMANTIC RELEASE"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
