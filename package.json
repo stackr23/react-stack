@@ -46,5 +46,10 @@
     "@stackr23/config-eslint": "^2.0.0",
     "@stackr23/webpack": "^2.0.0",
     "tslib": "^2.3.0"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
   }
 }
