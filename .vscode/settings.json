@@ -1,27 +1,32 @@
 {
-  "editor.formatOnSaveTimeout": 500,
-  "editor.defaultFormatter": "teeLang.vsprettier",
-  "vsprettier.requireConfig": true,
-  "vsprettier.packageManager": "npm",
-  "vsprettier.useEsLint": false,
-  "vsprettier.useStyleLint": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
-  "eslint.alwaysShowStatus": true,
-  "eslint.run": "onType",
-  "eslint.lintTask.enable": true,
-  "eslint.workingDirectories": [
-    {
-      "directory": ".",
-      "changeProcessCWD": true
-    }
-  ],
-  "js/ts.implicitProjectConfig.checkJs": true,
+  // disable vsCode's internal default formatter
   "javascript.validate.enable": false,
   "javascript.format.enable": false,
-  "[javascriptreact,typescriptreact]": {
+  "typescript.validate.enable": false,
+  "typescript.format.enable": false,
+  // use prettier as default formatter (scss, json, md, yml, ...)
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // use ESLINT for these file types
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.run": "onType", // auto check on typing
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": true }, // auto fix on save
+  "eslint.alwaysShowStatus": true, // 'IgorSbitnev.error-gutters'
+  "eslint.workingDirectories": [{ "directory": ".", "changeProcessCWD": true }],
+  // Multiple languages specific editor settings NOT AVAILABLE YET
+  // https://github.com/microsoft/vscode/issues/51935
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false
+  },
+  "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.formatOnPaste": false,
     "editor.formatOnSave": false,
