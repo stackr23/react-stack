@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "@stackr23/config-eslint": "^2.0.4",
     "eslint": "^7.27.0",
     "husky": "^6.0.0",
     "karma": "^6.3.4",
@@ -43,7 +44,6 @@
     "rimraf": "^3.0.2"
   },
   "dependencies": {
-    "@stackr23/config-eslint": "^2.0.0",
     "@stackr23/webpack": "^2.0.0",
     "tslib": "^2.3.0"
   },
