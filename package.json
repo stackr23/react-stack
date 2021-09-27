@@ -27,10 +27,11 @@
     }
   },
   "lint-staged": {
-    "*.{css,scss,json,md,yml}": [],
+    "*.{css,scss,json,md,yml}": [
+      "prettier --write"
+    ],
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix --quiet",
-      "git add"
+      "eslint --fix --quiet"
     ]
   },
   "devDependencies": {
