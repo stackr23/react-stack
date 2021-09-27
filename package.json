@@ -8,7 +8,8 @@
     "lint": "eslint --fix --ext \".js,.jsx,.ts,.tsx\" . --quiet --format pretty && prettier **/*.{css,scss,md,json} --write",
     "clean": "rimraf build",
     "build": "npm run clean && webpack -p --mode production --env production",
-    "start": "webpack-dev-server --open --mode development --env development_core"
+    "start": "webpack-dev-server --open --mode development --env development_core",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
