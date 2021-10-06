@@ -1,6 +1,6 @@
 import React from 'react'
 
-import App from './App.jsx'
+import App from './App.tsx'
 
 const { enzyme: { mount }, chai: { expect }} = global
 
