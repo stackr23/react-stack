@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx karma start ./node_modules/@stackr23/webpack/karma",
+    "test": "npx karma start ./node_modules/@stackr23/webpack/karma && npm run build",
     "lint": "eslint --fix --ext \".js,.jsx,.ts,.tsx\" . --quiet --format pretty && prettier **/*.{css,scss,md,json} --write",
     "clean": "rimraf build",
     "build": "npm run clean && webpack -p --mode production --env production",
