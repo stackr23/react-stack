@@ -1,7 +1,7 @@
 {
   "display": "Node 14",
   "compilerOptions": {
-    "strict": true,
+    "strict": true, // also sets "alwaysStrict": true
     "noImplicitReturns": true,
     "outDir": "./build/",
     "sourceMap": true,
@@ -17,6 +17,7 @@
     "importHelpers": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "components/*": ["./src/components/*"]
