@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 
-const JsTestComponent = (test) => {
-  return <>{test + ''}</>
-  // return props.testparam ? <>{props.testparam}</> : <>{'JSTESTCOMPONENT'}</>
+const JsTestComponent = (props) => {
+  // return <>{props + ''}</>
+  return <>{props.testParam ?? 'JSTESTCOMPONENT'}</>
 }
 
 export default JsTestComponent
