@@ -1,11 +1,13 @@
-import React, { PureComponent } from 'react'
+import React, { VoidFunctionComponent  } from 'react'
 
 interface Props {
-  content: string;
+  content?: string;
 }
 
-const TsTestComponent = (props: Props): string => {
-  return <>{props.content}</>
+// type TsTestComponent = VoidFunctionComponent
+
+const TsTestComponent: VoidFunctionComponent = (props: Props) => {
+  return <div>{props.content}</div>
 }
 
 // TsTestComponent({ content: 'test' })
