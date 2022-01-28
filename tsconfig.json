@@ -1,11 +1,9 @@
 {
   "display": "Node 14",
   "compilerOptions": {
-    "strict": true,
+    "strict": true, // also sets "alwaysStrict": true
     "noImplicitReturns": true,
     "outDir": "./build/",
-    "types": ["node"],
-    "typeRoots": ["node_modules/@types"],
     "sourceMap": true,
     "jsx": "react",
     "lib": ["esnext", "dom"],
@@ -14,12 +12,12 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "declaration": false,
     "noImplicitAny": false,
     "downlevelIteration": true,
     "importHelpers": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "components/*": ["./src/components/*"]

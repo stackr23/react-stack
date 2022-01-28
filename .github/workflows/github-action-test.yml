@@ -1,4 +1,4 @@
-name: Test and Lint
+name: Lint, Test and Build
 on:
   push:
     branches:
@@ -27,3 +27,4 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm test
+      - run: npm run build

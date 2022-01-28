@@ -2,19 +2,12 @@
 
 > generated with [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 
-
-
 ## [1.0.1](https://github.com/stackr23/react-stack/compare/v1.0.0...v1.0.1) (2021-09-06)
-
-
-### :wrench: Configs
-
-* **gh-actions:** finish `semantic-release` workflow ([9c5e511](https://github.com/stackr23/react-stack/commit/9c5e511df123e5f9ad441c5bda35e2db2ac6f44b))
-
 
 ### :construction_worker: Continuous Integration
 
-* **release:** install `@stackr23/conventional-changelog-config` ([5db2bbd](https://github.com/stackr23/react-stack/commit/5db2bbd064ffcc3ee2e60e1f775eacce67f9cd52))
+- **gh-actions:** finish `semantic-release` workflow ([9c5e511](https://github.com/stackr23/react-stack/commit/9c5e511df123e5f9ad441c5bda35e2db2ac6f44b))
+- **release:** install `@stackr23/conventional-changelog-config` ([5db2bbd](https://github.com/stackr23/react-stack/commit/5db2bbd064ffcc3ee2e60e1f775eacce67f9cd52))
 
 # 1.0.0 (2021-09-06)
 
