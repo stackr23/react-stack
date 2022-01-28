@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx karma start ./node_modules/@stackr23/webpack/karma && npm run build",
+    "test": "npx karma start ./node_modules/@stackr23/webpack/karma",
     "lint": "eslint --fix --ext \".js,.jsx,.ts,.tsx\" . --quiet --format pretty && prettier **/*.{css,scss,md,json} --write",
     "clean": "rimraf build",
     "build": "npm run clean && webpack -p --mode production --env production",
@@ -24,7 +24,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm test"
+      "pre-push": "npm test && npm run build"
     }
   },
   "lint-staged": {
