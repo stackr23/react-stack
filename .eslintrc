@@ -1,9 +1,6 @@
 {
   "extends": "./node_modules/@stackr23/config-eslint",
   "settings": {
-    "react": {
-      "version": "detect"
-    },
     "import/resolver": {
       "node": false,
       "webpack": false,
@@ -11,18 +8,5 @@
         "alwaysTryTypes": true
       }
     }
-  },
-  "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-    "sort-imports": [
-      2,
-      {
-        "ignoreCase": false,
-        "ignoreDeclarationSort": true,
-        "ignoreMemberSort": true,
-        "memberSyntaxSortOrder": ["single", "all", "multiple", "none"],
-        "allowSeparatedGroups": true
-      }
-    ]
   }
 }
