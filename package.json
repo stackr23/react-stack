@@ -9,7 +9,7 @@
     "clean": "rimraf build",
     "build": "npm run clean && webpack -p --mode production --env production",
     "start": "webpack-dev-server --open --mode development --env development_core",
-    "prepare": "husky install"
+    "prepare": "npx husky install"
   },
   "repository": {
     "type": "git",
