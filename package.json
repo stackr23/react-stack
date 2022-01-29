@@ -9,7 +9,7 @@
     "clean": "rimraf build",
     "build": "npm run clean && webpack -p --mode production --env production",
     "start": "webpack-dev-server --open --mode development --env development_core",
-    "format": "prettier **/*.{css,scss,md,json,yml} --write"
+    "format": "prettier **/*.{css,scss,md,json,yml} --config ./node_modules/@stackr23/config-eslint/prettier.config.js --write"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
   },
   "lint-staged": {
     "*.{css,scss,json,md,yml}": [
-      "prettier --write"
+      "prettier --config ./node_modules/@stackr23/config-eslint/prettier.config.js --write"
     ],
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix --quiet"
