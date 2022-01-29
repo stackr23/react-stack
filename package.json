@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "npx karma start ./node_modules/@stackr23/webpack/karma",
-    "lint": "eslint --fix --ext \".js,.jsx,.ts,.tsx\" . --quiet --format pretty && prettier **/*.{css,scss,md,json} --write",
+    "lint": "eslint --fix --ext \".js,.jsx,.ts,.tsx\" . --quiet --format pretty",
     "clean": "rimraf build",
     "build": "npm run clean && webpack -p --mode production --env production",
     "start": "webpack-dev-server --open --mode development --env development_core",
-    "prepare": "npx husky install"
+    "format": "prettier **/*.{css,scss,md,json,yml} --write"
   },
   "repository": {
     "type": "git",
