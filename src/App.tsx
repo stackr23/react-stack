@@ -11,8 +11,7 @@ class App extends PureComponent {
   render(props: AppProps): string {
     return (
       <>
-        <h1 id="app_headline">@stackr23/webpack up and running!</h1>
-        <JsTestComponent /* testParam="teststring" */ />
+        <h1 id="app_headline">StackR23's REACT ENVIRONMENT...</h1>
       </>
     )
   }
