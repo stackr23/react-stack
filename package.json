@@ -9,6 +9,7 @@
     "clean": "rimraf build",
     "build": "npm run clean && webpack -p --mode production --env production",
     "start": "webpack-dev-server --open --mode development --env development_core",
+    "prepare": "npx husky install",
     "format": "prettier **/*.{css,scss,md,json,yml} --config ./node_modules/@stackr23/config-eslint/prettier.config.js --write"
   },
   "repository": {
